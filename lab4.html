@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>INST377 Lab 4</title>
+        <link rel="stylesheet" href="lab4.css">
+    </head>
+
+    <body>
+        <section id="sections">
+            <form name="name" onsubmit="return(alert())">
+                <input type="text" id="name" name="name" required>
+                <input type="submit" id="submit" value="Alert Me!">
+            </form>
+
+            <script type="text/javascript">
+                function alert() {
+                    if(document.name.submit.value === TRUE) {
+                        alert("Hello " + name)
+                        return TRUE
+                    }
+                }
+            </script>
+        </section>
+
+        <section id="sections">
+            <form name="tester">
+                <input type="text" id="tester" name="tester">
+                <input type="submit" id="submit" value="Validate Text">
+            </form>
+
+            <script>
+                
+            </script>
+        </section>>
+    </body>
+</html>
