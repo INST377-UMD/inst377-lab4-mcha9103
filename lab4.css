@@ -1,0 +1,30 @@
+body {
+    background-color: aliceblue;
+}
+
+.boxes {
+    display: flex;
+}
+
+.leftboxes {
+    float: left;
+}
+
+.rightboxes {
+    float: right;
+    margin-left: 50px;
+}
+
+.sectionsName, .sectionsTester, .sectionsColor, .sectionsText {
+    margin: auto;
+    background-color: mediumpurple;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    min-width: 500px;
+    border: 20px black;
+    border-radius: 10px;
+}

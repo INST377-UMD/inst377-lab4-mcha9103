@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>INST377 Lab 4</title>
+        <link rel="stylesheet" href="lab4.css">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <h1 id="header">INST377 - Lab 4</h1>
+
+        <div class="boxes">
+        <!-- Left Side -->
+            <div class="leftboxes">
+            <!-- Name Section -->
+                <div class="sectionsName">
+                    <form name="contactMe" onsubmit="alertMe()" action="">
+                        <label>Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <input type="submit" value="Alert Me!">
+                    </form>
+                </div>
+                <br>
+
+            <!-- Tester Section -->
+                <div class="sectionsTester">
+                    <form name="testerText" onsubmit="validateText()">
+                        <label>Text Tester:</label>
+                        <input type="text" id="text" name="text">
+                        <input type="submit" value="Validate Text">
+                    </form>
+                </div>
+            </div>
+
+        <!-- Right Side -->
+            <div class="rightboxes">
+            <!-- Color Changer -->
+                <div class="sectionsColor">
+                    <button onclick="background()">Change Color</button>
+                </div>
+                <br>
+            
+            <!-- Text -->
+                <div class="sectionsText">
+                    <button onclick="add()">Add Text</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JS -->
+        <script type="text/JavaScript">
+            function alertMe() {
+                let m = document.getElementById("name").value;
+                alert("Hello " + m + "!");
+            }
+
+            function validateText() {
+                var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                if (validation.test(document.testerText.text.value)) {
+                    alert('Nope. Try again...');
+                    return false
+                }
+                return true;
+            }
+
+            function background() {
+                if (document.body.style.background == 'blue') {
+                    document.body.style.background = 'red'
+                }
+                else {
+                    document.body.style.background = 'blue'
+                }
+            }
+
+            function add() {
+                document.getElementById('header').innerHTML = "INST377 - Lab 4 - Add Text"
+            }
+        </script>
+
+        </section>
+    </div>
+    </body>
+</html>
